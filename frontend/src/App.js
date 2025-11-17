@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ImageUpload from './components/ImageUpload';
+import ImageGallery from './components/ImageGallery';
 import './App.css';
 
 function App() {
+  const [toast, setToast] = useState({ show: false, message: '', type: '' });
+  const [uploadedImage, setUploadedImage] = useState(null);
+
+  const showToast = (message, type = 'success') => {
+    setToast({ show: true, message, type });
+    setTimeout(() => {
+      setToast({ show: false, message: '', type: '' });
+    }, 3000);
+  };
+
+  const handleUploadSuccess = (image) => {
+    showToast(`Image "${image.filename}" uploaded successfully!`, 'success');
+    setUploadedImage(image);
+  };
+
+  const handleImageProcessed = () => {
+    setUploadedImage(null);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="app-header">
+        <h1>Mini Image Gallery</h1>
+        <p>Upload and manage your images</p>
       </header>
+
+      <main className="app-main">
+        <ImageUpload onUploadSuccess={handleUploadSuccess} />
+        <ImageGallery 
+          uploadedImage={uploadedImage}
+          onImageProcessed={handleImageProcessed}
+        />
+      </main>
+
+      {toast.show && (
+        <div className={`toast ${toast.type}`}>
+          {toast.message}
+        </div>
+      )}
     </div>
   );
 }
