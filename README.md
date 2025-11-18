@@ -85,6 +85,15 @@ npm run setup
 
 3. **Open your browser** and navigate to http://localhost:3000
 
+## 🌐 Live Deployment
+
+The application is deployed and available online:
+
+- **Frontend**: https://image-gallery-beta-ebon.vercel.app/
+- **Backend**: https://image-gallery-g8k2.onrender.com/
+
+You can visit the live application to test all features without local setup.
+
 ## 📁 Project Structure
 
 ```
