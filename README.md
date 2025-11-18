@@ -46,20 +46,14 @@ Before running this application, ensure you have the following installed:
 - Modern web browser with JavaScript support (Chrome, Firefox, Safari, Edge)
 - Git (for version control, optional)
 
-### System Requirements
-- **RAM**: Minimum 4GB (8GB recommended)
-- **Storage**: At least 500MB free space
-- **Internet Connection**: Required for downloading dependencies
-- **Permissions**: Read/write access to project directories
-
 ## 🚀 Quick Start
 
 ### One-Command Setup (Recommended)
 
 ```bash
 # Clone the repository (if using Git)
-git clone <repository-url>
-cd markopolo
+git clone https://github.com/iakshayrathee/image-gallery
+cd image-gallery
 
 # Install and start both backend and frontend
 npm run setup
@@ -251,25 +245,6 @@ All endpoints return appropriate HTTP status codes:
 - **Progress Tracking**: Axios onUploadProgress callback for real-time progress updates.
 - **Image Display**: Images served directly from memory buffers with proper content types.
 
-## ⚠️ Limitations
-
-1. **In-Memory Storage**: Images are lost when the server restarts. Not suitable for production.
-2. **Single Server**: No clustering or load balancing implemented.
-3. **No Authentication**: No user system - all images are publicly accessible.
-4. **No Persistence**: No database integration for permanent storage.
-5. **Memory Usage**: Large numbers of images will consume significant server memory.
-6. **No Image Processing**: No resizing, compression, or EXIF data handling.
-
-## 🚧 Potential Enhancements
-
-1. **Database Integration**: Add MongoDB or PostgreSQL for persistent storage
-2. **User Authentication**: Implement user accounts and private galleries
-3. **Image Processing**: Add image resizing, compression, and format conversion
-4. **Cloud Storage**: Integrate with AWS S3 or Cloudinary for scalable storage
-5. **Advanced Search**: Add filtering, sorting, and search functionality
-6. **Social Features**: Add likes, comments, and sharing capabilities
-7. **Progressive Web App**: Make it installable with service workers
-8. **Testing**: Add comprehensive unit and integration tests
 
 ## 🧪 Testing
 
