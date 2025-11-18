@@ -3,7 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const multer = require('multer');
 
-const imageRoutes = require('./routes/images');
+const imageRoutes = require('./routes/image');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
