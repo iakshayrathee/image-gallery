@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://image-gallery-g8k2.onrender.com/api' || 'http://localhost:5000/api';
 
 // Create axios instance with default config
 const api = axios.create({
